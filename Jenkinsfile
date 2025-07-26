@@ -1,5 +1,5 @@
 pipeline {
-   
+
     agent{
         node {
             label 'Development'
@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            
+
                 echo "Building ... in the node ${NODE_NAME}  and in the executor ${EXECUTOR_NUMBER}"
                 sh 'uname -n'
             }
@@ -21,9 +21,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             echo "Deploying ... in the node ${NODE_NAME}  and in the executor ${EXECUTOR_NUMBER}"  
+             echo "Deploying ... in the node ${NODE_NAME}  and in the executor ${EXECUTOR_NUMBER}"
              sh 'uname -n'
-            }  
+            }
         }
     }
     post {
